@@ -229,7 +229,7 @@ void FUNCTION_Transmit()
 #ifndef ENABLE_FEAT_F4HWN
     BK4819_DisableScramble();
 #else
-    if (gCurrentVfo->SCRAMBLING_TYPE > 0 && gSetting_ScrambleEnable)
+    if (gCurrentVfo->SCRAMBLING_TYPE > 0)
         BK4819_EnableScramble(gCurrentVfo->SCRAMBLING_TYPE - 1);
     else
         BK4819_DisableScramble();

@@ -698,7 +698,7 @@ void UI_DisplayMenu(void)
         case MENU_SCR:
             strcpy(String, gSubMenu_SCRAMBLER[gSubMenuSelection]);
             #if 1
-                if (gSubMenuSelection > 0 && gSetting_ScrambleEnable)
+                if (gSubMenuSelection > 0)
                     BK4819_EnableScramble(gSubMenuSelection - 1);
                 else
                     BK4819_DisableScramble();

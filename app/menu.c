@@ -544,14 +544,14 @@ void MENU_AcceptSetting(void)
             gRequestSaveChannel       = 1;
             return;
 
-#ifndef ENABLE_FEAT_F4HWN
+#ifdef ENABLE_FEAT_F4HWN
         case MENU_SCR:
             gTxVfo->SCRAMBLING_TYPE = gSubMenuSelection;
-            #if 0
-                if (gSubMenuSelection > 0 && gSetting_ScrambleEnable)
-                    BK4819_EnableScramble(gSubMenuSelection - 1);
-                else
-                    BK4819_DisableScramble();
+            #if 1
+            if (gSubMenuSelection > 0)
+                BK4819_EnableScramble(gSubMenuSelection - 1);
+            else
+                BK4819_DisableScramble();
             #endif
             gRequestSaveChannel     = 1;
             return;

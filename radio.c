@@ -818,7 +818,7 @@ void RADIO_SetupRegisters(bool switchToForeground)
             }
 
 #ifdef ENABLE_FEAT_F4HWN
-            if (gRxVfo->SCRAMBLING_TYPE > 0 && gSetting_ScrambleEnable)
+            if (gRxVfo->SCRAMBLING_TYPE > 0)
                 BK4819_EnableScramble(gRxVfo->SCRAMBLING_TYPE - 1);
             else
                 BK4819_DisableScramble();
